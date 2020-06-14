@@ -14,7 +14,7 @@ git clone https://github.com/blogcacanid/ang9-product.git
 ## Lalu masuk ke direktori project:
 cd ang9-product
 
-## Selanjutnya jalankan perintah berikut secara berurutan:
+## Selanjutnya jalankan perintah berikut:
 - npm install
 
 ## Testing
