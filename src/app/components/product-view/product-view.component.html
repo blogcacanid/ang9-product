@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-3">
+      <div class="card-header"><h5><i class="fa fa-eye"></i>&nbsp;View Product</h5></div>
+      <div class="card-body" style="font-style: Calibri;font-size:12px">
+      <table class="table table-bordered table-striped">
+          <tbody>
+        <tr>
+          <td><b>Product Name</b></td>
+          <td>{{productData['product_name']}}</td>
+        </tr>
+        <tr>
+          <td><b>Product Price</b></td>
+          <td>{{productData['product_price']| number}}</td>
+        </tr>
+          </tbody>
+      </table>
+      <br>
+      <a [routerLink]="['/product-list']" class="btn btn-secondary" title="Cancel"><i class="fa fa-arrow-circle-left"></i>&nbsp;Cancel</a>&nbsp;
+      </div>
+    </div>
+  </div>
+</div>

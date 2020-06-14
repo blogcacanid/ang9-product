@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card mb-3">
+      <div class="card-header"><h5><i class="fa fa-list"></i>&nbsp;Products List</h5></div>
+      <div class="card-body">
+
+        <a [routerLink]="['/product-add/']" class="btn btn-success btn-sm mb-3" title="Add New Record"><i class="fa fa-plus-circle"></i>&nbsp;Add Record</a>
+        <!-- Product list -->
+        <table  datatable class="table table-bordered table-striped" style="font-style: Calibri;font-size:11px" *ngIf="this.temp">
+          <thead>
+            <tr>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Price</th>
+              <th scope="col center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of Product; let i = index">
+              <td>{{product.product_name}}</td>
+              <td>{{product.product_price| number}}</td>
+              <td class="text-center edit-block">
+                <a [routerLink]="['/product-view/', product.id]" title="View"><span style="font-size: 1em; color: Mediumslateblue;"><i class="fa fa-eye"></i></span></a>&nbsp;&nbsp;
+                <a [routerLink]="['/product-edit/', product.id]" title="Edit"><span style="font-size: 1em; color: Dodgerblue;"><i class="fa fa-edit"></i></span></a>&nbsp;&nbsp;
+                <a [routerLink]="['/product-delete/', product.id]" title="Delete"><span style="font-size: 1em; color: Tomato;"><i class="fa fa-trash"></i></span></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-6 edit-product">
+    <div class="card">
+      <div class="card-header bg-primary text-white"><h5><i class="fa fa-edit"></i>&nbsp;Edit Record</h5></div>
+      <div class="card-body">
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="inputProductName">Product Name</label>
+          <input class="form-control" type="text" formControlName="product_name" placeholder="Enter product name">
+          <!-- error -->
+          <div class="invalid-feedback" *ngIf="submitted && myForm.product_name.errors?.required">
+            Product name required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputProductPrice">Product Price</label>
+          <input class="form-control" type="text" formControlName="product_price" placeholder="Enter product price">
+          <!-- error -->
+          <div class="invalid-feedback" *ngIf="submitted && myForm.product_price.errors?.required">
+            Enter product price.
+          </div>
+          <div class="invalid-feedback" *ngIf="submitted && myForm.product_price.errors?.pattern">
+            Enter Numbers Only
+          </div>
+        </div>
+
+        <div class="form-group">
+          <a [routerLink]="['/product-list']" class="btn btn-secondary" title="Cancel"><i class="fa fa-arrow-circle-left"></i>&nbsp;Cancel</a>&nbsp;
+          <button class="btn btn-primary" title="Update now" type="submit"><i class="fa fa-save"></i>&nbsp;Update Record</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>

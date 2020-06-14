@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-3">
+      <div class="card-header bg-danger text-white"><h5><i class="fa fa-trash"></i>&nbsp;Delete Product</h5></div>
+	      <div class="card-body" style="font-style: Calibri;font-size:12px">
+	      <table class="table table-bordered table-striped">
+			<tbody>
+				<tr>
+					<td><b>Product Name</b></td>
+					<td>{{productData['product_name']}}</td>
+				</tr>
+				<tr>
+					<td><b>Product Price</b></td>
+					<td>{{productData['product_price']| number}}</td>
+				</tr>
+			</tbody>
+	      </table>
+	      <br>
+		  <p><b>Are you sure DELETE  this record?</b></p>
+	      <button class="btn btn-secondary" (click)="navigation('')" title="Back"><i class="fa fa-arrow-circle-left"></i>&nbsp;Go Back</button>&nbsp;
+	      <span class="delete" (click)="removeProduct()" title="Update now">
+	      	<button type="button" class="btn btn-danger"><i class="fa fa-save"></i>&nbsp;Delete Record</button>
+	      </span>
+      </div>
+    </div>
+  </div>
+</div>
